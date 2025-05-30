@@ -1,0 +1,52 @@
+﻿@model IEnumerable<Students>
+
+    <h1 class="alert alert-info text-center" style="background-color:bisque;color:white">Students</h1>
+<a asp-action="GetCreateView" asp-controller="Students" class="btn btn-success mb-1">
+    Create New
+</a>
+
+@if(Model.Count() > 0)
+{
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(e=>e.Id)</th>
+                <th>@Html.DisplayNameFor(e=>e.FullName)</th>
+                <th>@Html.DisplayNameFor(e=>e.GPA)</th>
+                <th>@Html.DisplayNameFor(e=>e.Level)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach(var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.FullName</td>
+                    <td>@item.GPA</td>
+                    <td>@item.Level</td>
+                    <td>
+                        <a asp-controller="Students" asp-action="GetDetailsView"
+                           asp-route-id="@item.Id" class="btn btn-outline-success" title="Details"><i class="bi bi-info-square"></i></a>
+
+                        <a asp-controller="Students" asp-action="GetEditView"
+                           asp-route-id="@item.Id" class="btn btn-outline-primary" title="Edit"><i class="bi bi-pen-fill"></i></a>
+
+                        <a asp-controller="Students" asp-action="GetDeleteView"
+                           asp-route-id="@item.Id" class="btn btn-outline-danger" title="Delete"><i class="bi bi-x-square-fill"></i></a>
+                    </td>
+
+
+
+                </tr>
+            }
+
+        </tbody>
+        <tfoot>
+            <tr><th colspan="3" style="text-align:right">Highest GPA</th><td>@Model.Max(e=>e.GPA)</td></tr>
+        </tfoot>
+    </table>
+}
+else
+{
+    <h1 class="alert alert-danger text-center">No Students To Show</h1>
+}

@@ -1,0 +1,42 @@
+﻿@model IEnumerable<Departments>
+
+<h1 class="alert alert-info text-center" style="background-color:bisque;color:white">Departments</h1>
+
+<a asp-action="GetCreateView" asp-controller="Departments" class="btn btn-success mb-1">
+    Create New
+</a>
+
+
+@if(Model.Count() > 0)
+{
+    <table class="table table-bordered table-striped table-hover">
+        <thead>
+            <tr>
+                <th>@Html.DisplayNameFor(e=>e.Id)</th>
+                <th>@Html.DisplayNameFor(e=>e.Name)</th>
+                <th>@Html.DisplayNameFor(e=>e.Description)</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.Id</td>
+                    <td>@item.Name</td>
+                    <td>@item.Description</td>
+                    <td><a asp-action="GetDetailsView" asp-controller="Departments" asp-route-id="@item.Id"><i class="bi bi-info-square"></i></a></td>
+
+                    <td><a asp-action="GetEditView" asp-controller="Departments" asp-route-id="@item.Id"><i class="bi bi-pen-fill"></i></a></td>
+
+                    <td><a asp-action="GetDeleteView" asp-controller="Departments" asp-route-id="@item.Id"><i class="bi bi-x-square-fill"></i></a></td>
+                </tr>
+            }
+        </tbody>
+    </table>
+    
+}
+else
+{
+    <h1 class="alert alert-danger text-center">No Departments To Show</h1>
+    
+}

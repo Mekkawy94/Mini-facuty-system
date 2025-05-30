@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\Faculity_System.props" />
+</Project>

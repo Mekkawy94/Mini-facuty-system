@@ -1,0 +1,78 @@
+﻿@model Students
+
+<h1 class="alert alert-warning text-center">
+    Edit Student
+</h1>
+
+<div class="row">
+    <form class="col-4" method="post" asp-controller="Students" asp-action="EditCurrentStudent" enctype="multipart/form-data">
+
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+
+        <input type="hidden" asp-for="Id" />
+        <input type="hidden" asp-for="ImageUrl"/>
+
+        <div>
+            <label asp-for="FullName"></label>
+            <input type="text" asp-for="FullName" class="form-control" />
+            <span asp-validation-for="FullName" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label asp-for="GPA"></label>
+            <input type="text" asp-for="GPA" class="form-control" />
+            <span asp-validation-for="GPA" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label asp-for="Level"></label>
+            <input type="text" asp-for="Level" step="0.01" class="form-control" />
+            <span asp-validation-for="Level" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label asp-for="BirthDate"></label>
+            <input asp-for="BirthDate" class="form-control" />
+            <span asp-validation-for="BirthDate" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label asp-for="JoinDate"></label>
+            <input asp-for="JoinDate" class="form-control" />
+            <span asp-validation-for="JoinDate" class="text-danger"></span>
+        </div>
+
+        <div>
+            <label asp-for="ImageUrl"></label>
+            <input type="file" name="imageFormFile" id="imageFormFile" accept=".png,.jpg" onchange="AddImage()" class="form-control" />
+        </div>
+
+        <div>
+            <label asp-for="DepartmentsId"></label>
+            <select asp-for="DepartmentsId" asp-items="@ViewBag.DeptSelectItems" class="form-control">
+                <option selected disabled>Select...</option>
+            </select>
+        </div>
+
+
+
+        <div>
+            <button type="submit" class="btn btn-primary mt-1">Edit</button>
+            <a asp-controller="Students" asp-action="GetIndexView">Back to List</a>
+        </div>
+    </form>
+
+    <div class="col-4">
+        <img src="@Model.ImageUrl" id="empImage" style="object-fit:contain" />
+    </div>
+
+
+</div>
+
+@section Scripts{
+    <script>
+        function AddImage() {
+            document.getElementById('empImage').src = window.URL.createObjectURL(document.getElementById('ImageFormFile').files[0]);
+        }
+    </script>
+}

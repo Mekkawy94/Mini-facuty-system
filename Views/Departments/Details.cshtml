@@ -1,0 +1,38 @@
+﻿@model Departments
+
+<h1 class="alert alert-info text-center">@Model.Name Details</h1>
+
+<div class="row">
+    <dl class="row col-6">
+        <dt class="col-2">@Html.DisplayNameFor(e=>e.Id)</dt>
+        <dd class="col-10">@Html.DisplayFor(e=>e.Id)</dd>
+        @*<dd class="col-10">@Model.Id</dd>*@
+
+        <dt class="col-2">@Html.DisplayNameFor(e=>e.Name)</dt>
+        <dd class="col-10">@Html.DisplayFor(e=>e.Name)</dd>
+        @*<dd class="col-10">@Model.Name</dd>*@
+
+        <dt class="col-2">@Html.DisplayNameFor(e => e.Description)</dt>
+        <dd class="col-10">@Html.DisplayFor(e => e.Description)</dd>
+        @*<dd class="col-10">@Model.Description</dd>*@
+
+    </dl>
+
+    <h3>Department Students</h3>
+    @if (Model.Student.Count > 0)
+    {
+        <ul>
+            @foreach (var item in Model.Student)
+            {
+                <li>@item.FullName (@item.Level)</li>
+            }
+        </ul>
+    }
+    else
+    {
+        <h1 class="alert alert-danger">There is no Student in this department.</h1>
+    }
+
+
+</div>
+<a asp-controller="Departments" asp-action="GetIndexView">Back to List</a>
