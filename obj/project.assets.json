@@ -4133,11 +4133,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\cour\\محمد عصام الدين المكاوي\\Faculity_System\\Faculity_System.csproj",
+      "projectUniqueName": "E:\\GitHub Projects\\Mini-facuty-system\\Faculity_System.csproj",
       "projectName": "Faculity_System",
-      "projectPath": "E:\\cour\\محمد عصام الدين المكاوي\\Faculity_System\\Faculity_System.csproj",
+      "projectPath": "E:\\GitHub Projects\\Mini-facuty-system\\Faculity_System.csproj",
       "packagesPath": "C:\\Users\\LENOVO\\.nuget\\packages\\",
-      "outputPath": "E:\\cour\\محمد عصام الدين المكاوي\\Faculity_System\\obj\\",
+      "outputPath": "E:\\GitHub Projects\\Mini-facuty-system\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\LENOVO\\AppData\\Roaming\\NuGet\\NuGet.Config",

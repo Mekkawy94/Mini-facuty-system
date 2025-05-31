@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "tjmfknc9BiI=",
+  "dgSpecHash": "GPe8d/CwfZU=",
   "success": true,
-  "projectFilePath": "E:\\cour\\محمد عصام الدين المكاوي\\Faculity_System\\Faculity_System.csproj",
+  "projectFilePath": "E:\\GitHub Projects\\Mini-facuty-system\\Faculity_System.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.core\\1.25.0\\azure.core.1.25.0.nupkg.sha512",
     "C:\\Users\\LENOVO\\.nuget\\packages\\azure.identity\\1.7.0\\azure.identity.1.7.0.nupkg.sha512",
