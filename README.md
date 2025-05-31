@@ -49,10 +49,10 @@ This project serves as a basic faculty management system, allowing users to:
 ![Home](Screenshots/Home.png)
 ![Students](Screenshots/Students.png)
 ![Departments](Screenshots/Departments.png)
-![Students Details](Screenshots/Students%20Details.png)
+![Student Details](Screenshots/Student%20Details.png)
 ![Create New Student](Screenshots/Create%20New%20Student.png)
 ![Department Details](Screenshots/Department%20Details.png)
-![Create New Department](Screenshots/Create%20New%20Department.png)
+![Create Department](Screenshots/Create%20Department.png)
 
 
 
