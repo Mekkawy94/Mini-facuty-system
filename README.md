@@ -47,7 +47,15 @@ This project serves as a basic faculty management system, allowing users to:
 ## 📷 Screenshots
 
 ![Home](Screenshots/Home.png)
-![Explanation Scene](Screenshots/Explanation%20Scene.png)
-![Exam Scene](Screenshots/Practical%20Exam%20Scene2.png)
+![Students](Screenshots/Students.png)
+![Departments](Screenshots/Departments.png)
+![Students Details](Screenshots/Students%20Details.png)
+![Create New Student](Screenshots/Create%20New%20Student.png)
+![Department Details](Screenshots/Department%20Details.png)
+![Create New Department](Screenshots/Create%20New%20Department.png)
+
+
+
+
 
  
