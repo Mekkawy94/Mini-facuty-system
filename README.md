@@ -41,4 +41,13 @@ This project serves as a basic faculty management system, allowing users to:
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/Mekkawy94/Mini-facuty-system.git
+
+
+
+## 📷 Screenshots
+
+![Home](Screenshots/Home.png)
+![Explanation Scene](Screenshots/Explanation%20Scene.png)
+![Exam Scene](Screenshots/Practical%20Exam%20Scene2.png)
+
  
